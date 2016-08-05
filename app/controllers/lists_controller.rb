@@ -7,19 +7,21 @@ class ListsController < ApplicationController
   end
 
   def show
-    @list = List.find(params[:list_id])
+    @list = List.find(params[:id])
     @item = @list.items.build
   end
 
   def create
     @list = List.new(list_params)
-    @list.name = params[:list][:name]
-    @list.save
-
-    redirect_to list_url(@list)
+    if @list.save
+      redirect_to @list
+    else
+      @lists = List.all
+      render :index
+    end
   end
-  private
 
+  private
     def list_params # strong parameters
       params.require(:list).permit(:name)
     end

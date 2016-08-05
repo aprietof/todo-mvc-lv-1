@@ -1,0 +1,8 @@
+div.field_with_errors input[type="text"]::-webkit-input-placeholder {
+  color: red;
+  opacity: 0.5;
+}
+
+div.field_with_errors input[type="text"]{
+  border: 1px solid red;
+}
