@@ -1826,3 +1826,115 @@ Migrating to AddStatusToItems (20160805154631)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160805154631"]]
   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started POST "/lists" for ::1 at 2016-08-05 11:52:29 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by ListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cyVeLQR0flEM3fDgL2PoiJumtLUTSqlnl+OuQpqBFQITTT6R5GO0R7vVzCWcCUCX46DLd2b016zzSCtlCNyubw==", "list"=>{"name"=>""}, "commit"=>"Create List"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  Rendered lists/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 17.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/todomvc-base.self-a66641f41d319c2f2f39ae06e193cc37c366ccc356a61c65c573a7c7452f384e.css?body=1" for ::1 at 2016-08-05 11:52:29 -0400
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-05 11:52:29 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-05 11:52:29 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-05 11:52:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-08-05 11:52:29 -0400
+
+
+Started GET "/assets/lists.self-22b4b1c3e4098b4dbe9351e0735afd32e59ef7a740de727cdb458bf3b9c9d40c.css?body=1" for ::1 at 2016-08-05 11:52:29 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-05 11:52:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-05 11:52:29 -0400
+
+
+Started GET "/assets/lists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-05 11:52:29 -0400
+
+
+Started POST "/lists" for ::1 at 2016-08-05 11:52:31 -0400
+Processing by ListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cyVeLQR0flEM3fDgL2PoiJumtLUTSqlnl+OuQpqBFQITTT6R5GO0R7vVzCWcCUCX46DLd2b016zzSCtlCNyubw==", "list"=>{"name"=>""}, "commit"=>"Create List"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mList Load (0.1ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered lists/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/todomvc-base.self-a66641f41d319c2f2f39ae06e193cc37c366ccc356a61c65c573a7c7452f384e.css?body=1" for ::1 at 2016-08-05 11:52:31 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-05 11:52:31 -0400
+
+
+Started GET "/assets/lists.self-22b4b1c3e4098b4dbe9351e0735afd32e59ef7a740de727cdb458bf3b9c9d40c.css?body=1" for ::1 at 2016-08-05 11:52:31 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-05 11:52:31 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-08-05 11:52:31 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-05 11:52:31 -0400
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-05 11:52:31 -0400
+
+
+Started GET "/assets/lists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-05 11:52:31 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-05 11:52:31 -0400
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 11:52:35 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered lists/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 82ms (Views: 37.0ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddStatusToItems (20160805154631)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TEMPORARY TABLE "aitems" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "list_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "status" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "items"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aitems" ("id","description","list_id","created_at","updated_at","status") VALUES (1, 'Bread', 1, '2016-08-04 21:45:46.933843', '2016-08-04 21:46:03.389644', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aitems" ("id","description","list_id","created_at","updated_at","status") VALUES (2, 'Butter', 1, '2016-08-04 23:23:18.639850', '2016-08-04 23:23:18.639850', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aitems" ("id","description","list_id","created_at","updated_at","status") VALUES (6, 'oil', 1, '2016-08-05 01:02:42.027893', '2016-08-05 01:02:42.027893', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aitems" ("id","description","list_id","created_at","updated_at","status") VALUES (7, 'Beer', 1, '2016-08-05 01:11:09.419761', '2016-08-05 01:11:09.419761', NULL)[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "items"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "list_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aitems"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "items" ("id","description","list_id","created_at","updated_at") VALUES (1, 'Bread', 1, '2016-08-04 21:45:46.933843', '2016-08-04 21:46:03.389644')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "items" ("id","description","list_id","created_at","updated_at") VALUES (2, 'Butter', 1, '2016-08-04 23:23:18.639850', '2016-08-04 23:23:18.639850')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "items" ("id","description","list_id","created_at","updated_at") VALUES (6, 'oil', 1, '2016-08-05 01:02:42.027893', '2016-08-05 01:02:42.027893')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "items" ("id","description","list_id","created_at","updated_at") VALUES (7, 'Beer', 1, '2016-08-05 01:11:09.419761', '2016-08-05 01:11:09.419761')
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "aitems"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20160805154631"]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddStatusToItems (20160805154631)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.6ms)[0m  [1mALTER TABLE "items" ADD "status" integer DEFAULT 0[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160805154631"]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
