@@ -9,13 +9,19 @@ class ItemsController < ApplicationController
     end
   end
 
+  def update
+    set_item
+    @item.update(item_params)
+    redirect_to list_path(@item.list)
+  end
+
   private
 
   def set_item
-    @item = Item.find(:id)
+    @item = Item.find(params[:id])
   end
 
   def item_params
-    params.require(:item).permit(:description)
+    params.require(:item).permit(:description, :status)
   end
 end
