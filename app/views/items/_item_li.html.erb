@@ -5,4 +5,8 @@
     <label><%= item.description %></label>
   </div>
 
+    <%= form_tag(list_item_path(item.list, item), method: :delete) do %>
+      <button type="submit" class="destroy"></button>
+    <% end %>
+
 <% end %>

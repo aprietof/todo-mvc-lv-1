@@ -15,6 +15,12 @@ class ItemsController < ApplicationController
     redirect_to list_path(@item.list)
   end
 
+  def destroy
+    set_item
+    @item.destroy
+    redirect_to list_path(@item.list)
+  end
+
   private
 
   def set_item

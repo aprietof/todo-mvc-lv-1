@@ -5894,3 +5894,1362 @@ Processing by ListsController#show as HTML
   Rendered items/_item_li.html.erb (0.7ms)
   Rendered lists/show.html.erb within layouts/application (13.9ms)
 Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/lists/1/items/1" for ::1 at 2016-08-05 17:00:49 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"list_id"=>"1", "id"=>"1"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.5.1) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.5.1) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.5.1) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:164:in `block in halting'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:815:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Adrian/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/Adrian/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/Adrian/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.2ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (52.9ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (118.2ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:00:59 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (3.1ms)
+  Rendered items/_item_li.html.erb (1.7ms)
+  Rendered items/_item_li.html.erb (0.6ms)
+  Rendered items/_item_li.html.erb (0.5ms)
+  Rendered items/_item_li.html.erb (0.5ms)
+  Rendered lists/show.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 53ms (Views: 38.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:02:50 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (1.6ms)
+  Rendered lists/show.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/Users/Adrian/Dropbox/code/rails/todo-mvc-lv-1/app/views/items/_item_li.html.erb:8: syntax error, unexpected tLABEL
+...m_tag(item.list, item), method: delete do @output_buffer.saf...
+...                               ^):
+  app/views/items/_item_li.html.erb:8: syntax error, unexpected tLABEL
+  app/views/lists/show.html.erb:18:in `_app_views_lists_show_html_erb__2334010464482538986_70134934509080'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.9ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (60.7ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (127.4ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:03:31 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (1.2ms)
+  Rendered lists/show.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/Users/Adrian/Dropbox/code/rails/todo-mvc-lv-1/app/views/items/_item_li.html.erb:8: syntax error, unexpected tLABEL
+...path(item.list, item)), method: delete do @output_buffer.saf...
+...                               ^):
+  app/views/items/_item_li.html.erb:8: syntax error, unexpected tLABEL
+  app/views/lists/show.html.erb:18:in `_app_views_lists_show_html_erb__2334010464482538986_70134934509080'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.9ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (56.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (124.7ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:06:17 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (1.1ms)
+  Rendered lists/show.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/Users/Adrian/Dropbox/code/rails/todo-mvc-lv-1/app/views/items/_item_li.html.erb:8: syntax error, unexpected tLABEL
+...path(item.list, item)), method: delete do @output_buffer.saf...
+...                               ^):
+  app/views/items/_item_li.html.erb:8: syntax error, unexpected tLABEL
+  app/views/lists/show.html.erb:18:in `_app_views_lists_show_html_erb__2334010464482538986_70134934509080'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (55.9ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (125.1ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:06:29 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (35.8ms)
+  Rendered lists/show.html.erb within layouts/application (39.4ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `delete' for #<#<Class:0x007f931f86af88>:0x007f9318efada0>):
+     5:     <label><%= item.description %></label>
+     6:   </div>
+     7: 
+     8:     <%= form_tag(list_item_path(item.list, item), method: delete) do %>
+     9:       <button type="submit" class="destroy"></button>
+    10:     <% end %>
+    11: 
+  app/views/items/_item_li.html.erb:8:in `block in _app_views_items__item_li_html_erb___4136634932349346208_70134877573620'
+  app/helpers/items_helper.rb:9:in `block in list_for_item'
+  app/helpers/items_helper.rb:8:in `list_for_item'
+  app/views/items/_item_li.html.erb:1:in `_app_views_items__item_li_html_erb___4136634932349346208_70134877573620'
+  app/views/lists/show.html.erb:18:in `_app_views_lists_show_html_erb__2334010464482538986_70134934509080'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (77.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (51.0ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (120.7ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:07:08 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (4.8ms)
+  Rendered items/_item_li.html.erb (1.3ms)
+  Rendered items/_item_li.html.erb (1.4ms)
+  Rendered items/_item_li.html.erb (0.6ms)
+  Rendered items/_item_li.html.erb (0.7ms)
+  Rendered lists/show.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/todomvc-base.self-a66641f41d319c2f2f39ae06e193cc37c366ccc356a61c65c573a7c7452f384e.css?body=1" for ::1 at 2016-08-05 17:07:08 -0400
+
+
+Started GET "/assets/lists.self-22b4b1c3e4098b4dbe9351e0735afd32e59ef7a740de727cdb458bf3b9c9d40c.css?body=1" for ::1 at 2016-08-05 17:07:08 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-05 17:07:08 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-05 17:07:08 -0400
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-05 17:07:08 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-05 17:07:08 -0400
+
+
+Started GET "/assets/lists.self-9d4b2205ff736a0fd786f2190e96956207bdff8a1be9030fbf6c080af703dc13.js?body=1" for ::1 at 2016-08-05 17:07:08 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-05 17:07:08 -0400
+
+
+Started DELETE "/lists/1/items/1" for ::1 at 2016-08-05 17:07:13 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GOrNNB3c1VkEkzS9GfXx93rJV1CaqD9lqPbTuA49aOF4gq2I/csfT7ObCHiqn1noAs8oku8WQa7MXVafnGDTjA==", "list_id"=>"1", "id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (5.1ms)[0m  commit transaction
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/lists/1
+Completed 302 Found in 9ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:07:13 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (3.2ms)
+  Rendered items/_item_li.html.erb (1.2ms)
+  Rendered items/_item_li.html.erb (1.5ms)
+  Rendered items/_item_li.html.erb (0.8ms)
+  Rendered lists/show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 17:46:02 -0400
+Processing by ListsController#index as HTML
+  [1m[35mList Load (0.2ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered lists/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-05 17:46:02 -0400
+
+
+Started POST "/lists" for ::1 at 2016-08-05 17:46:10 -0400
+Processing by ListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R2L0E8e0n73VysJlafj3hp/7UvBKXL3evG7dCnk2i0cnCpSvJ6NVq2LC/qDakl+Z5/0tMj/iwxXYxVgt62swKg==", "list"=>{"name"=>"Andres's List"}, "commit"=>"Create List"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "lists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Andres's List"], ["created_at", "2016-08-05 21:46:10.039941"], ["updated_at", "2016-08-05 21:46:10.039941"]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/lists/4
+Completed 302 Found in 9ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/lists/4" for ::1 at 2016-08-05 17:46:10 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 4]]
+  Rendered items/_item_li.html.erb (0.0ms)
+  Rendered lists/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/lists/4/items" for ::1 at 2016-08-05 17:46:15 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L9Fm34y+IocjwjAF32I9OAtgqNHBhSRVjJ2P+89OpaBPuQZjbKnokZTKDMBsCJUnc2bXE7Q7Wp7oNgrcXRMezQ==", "item"=>{"description"=>"hacer un post"}, "commit"=>"Create Item", "list_id"=>"4"}
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("description", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["description", "hacer un post"], ["list_id", 4], ["created_at", "2016-08-05 21:46:15.260848"], ["updated_at", "2016-08-05 21:46:15.260848"]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/lists/4
+Completed 302 Found in 9ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/lists/4" for ::1 at 2016-08-05 17:46:15 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 4]]
+  Rendered items/_item_li.html.erb (1.6ms)
+  Rendered items/_item_li.html.erb (1.4ms)
+  Rendered lists/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/lists/4/items" for ::1 at 2016-08-05 17:46:23 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fuVezy/DaYmUmEDzp0ES629qddMc973DTpPU3qSUZlUejT5zz9SjnyOQfDYUK7r0F2wKEWlJwwgqOFH5NsndOA==", "item"=>{"description"=>""}, "commit"=>"Create Item", "list_id"=>"4"}
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 4]]
+  Rendered items/_item_li.html.erb (3.2ms)
+  Rendered lists/show.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"items", :id=>nil, :list_id=>"4"} missing required keys: [:id]):
+     5:     <label><%= item.description %></label>
+     6:   </div>
+     7: 
+     8:     <%= form_tag(list_item_path(item.list, item), method: :delete) do %>
+     9:       <button type="submit" class="destroy"></button>
+    10:     <% end %>
+    11: 
+  app/views/items/_item_li.html.erb:8:in `block in _app_views_items__item_li_html_erb___4136634932349346208_70134948301580'
+  app/helpers/items_helper.rb:9:in `block in list_for_item'
+  app/helpers/items_helper.rb:8:in `list_for_item'
+  app/views/items/_item_li.html.erb:1:in `_app_views_items__item_li_html_erb___4136634932349346208_70134948301580'
+  app/views/lists/show.html.erb:18:in `_app_views_lists_show_html_erb__2334010464482538986_70134934509080'
+  app/controllers/items_controller.rb:8:in `create'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (71.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (54.7ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (115.1ms)
+
+
+Started GET "/lists/4" for ::1 at 2016-08-05 17:46:44 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 4]]
+  Rendered items/_item_li.html.erb (0.9ms)
+  Rendered items/_item_li.html.erb (0.9ms)
+  Rendered lists/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/lists/4/items/11" for ::1 at 2016-08-05 17:46:47 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SbAhf7ofoSgRj9sHqMS3ArPe4GWh5a0z7CqFPhUDLLQp2EHDWghrPqaH58Ibrh8dy9ifp9Rb0/iIgQAZh16X2Q==", "list_id"=>"4", "id"=>"11"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 11]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 4]]
+Redirected to http://localhost:3000/lists/4
+Completed 302 Found in 21ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/lists/4" for ::1 at 2016-08-05 17:46:47 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 4]]
+  Rendered items/_item_li.html.erb (0.0ms)
+  Rendered lists/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/lists/4/items" for ::1 at 2016-08-05 17:46:50 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tBFN6rTGpvjeENHAiBUrq2b+fcaLyhMn6REJ7c66ROvUeS1WVNFs7mkY7QU7f4O0HvgCBP50beyNuozKXOf/hg==", "item"=>{"description"=>""}, "commit"=>"Create Item", "list_id"=>"4"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 4]]
+  Rendered items/_item_li.html.erb (4.6ms)
+  Rendered lists/show.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"items", :id=>nil, :list_id=>"4"} missing required keys: [:id]):
+     5:     <label><%= item.description %></label>
+     6:   </div>
+     7: 
+     8:     <%= form_tag(list_item_path(item.list, item), method: :delete) do %>
+     9:       <button type="submit" class="destroy"></button>
+    10:     <% end %>
+    11: 
+  app/views/items/_item_li.html.erb:8:in `block in _app_views_items__item_li_html_erb___4136634932349346208_70134948301580'
+  app/helpers/items_helper.rb:9:in `block in list_for_item'
+  app/helpers/items_helper.rb:8:in `list_for_item'
+  app/views/items/_item_li.html.erb:1:in `_app_views_items__item_li_html_erb___4136634932349346208_70134948301580'
+  app/views/lists/show.html.erb:18:in `_app_views_lists_show_html_erb__2334010464482538986_70134934509080'
+  app/controllers/items_controller.rb:8:in `create'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.7ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (54.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (130.9ms)
+
+
+Started GET "/lists/4" for ::1 at 2016-08-05 17:47:06 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 4]]
+  Rendered items/_item_li.html.erb (0.0ms)
+  Rendered lists/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/lists/4/items" for ::1 at 2016-08-05 17:47:55 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZAW3SSmmt5yVNmhPYwOZG+p5eSX4yMwDrLTzNqEYfnAEbdf1ybF9iiI+VIrQaTEEkn8G5412ssjIH3YRM0XFHQ==", "item"=>{"description"=>""}, "commit"=>"Create Item", "list_id"=>"4"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 4]]
+  Rendered items/_item_li.html.erb (3.8ms)
+  Rendered lists/show.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"items", :id=>nil, :list_id=>"4"} missing required keys: [:id]):
+     5:     <label><%= item.description %></label>
+     6:   </div>
+     7: 
+     8:     <%= form_tag(list_item_path(item.list, item), method: :delete) do %>
+     9:       <button type="submit" class="destroy"></button>
+    10:     <% end %>
+    11: 
+  app/views/items/_item_li.html.erb:8:in `block in _app_views_items__item_li_html_erb___4136634932349346208_70134948301580'
+  app/helpers/items_helper.rb:9:in `block in list_for_item'
+  app/helpers/items_helper.rb:8:in `list_for_item'
+  app/views/items/_item_li.html.erb:1:in `_app_views_items__item_li_html_erb___4136634932349346208_70134948301580'
+  app/views/lists/show.html.erb:18:in `_app_views_lists_show_html_erb__2334010464482538986_70134934509080'
+  app/controllers/items_controller.rb:8:in `create'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.2ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (64.7ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (136.5ms)
+
+
+Started GET "/lists/4" for ::1 at 2016-08-05 17:48:13 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 4]]
+  Rendered items/_item_li.html.erb (0.0ms)
+  Rendered lists/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 17:48:19 -0400
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  Rendered lists/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/lists" for ::1 at 2016-08-05 17:48:23 -0400
+Processing by ListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p6y2QQFFaHzrYIA7aNSmncY0urw0RbczntGxTMQbre3HxNb94VKialxovP7bvg6CvjLFfkH7yfj6ejRrVkYWgA==", "list"=>{"name"=>""}, "commit"=>"Create List"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mList Load (0.2ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered lists/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:48:25 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (3.7ms)
+  Rendered items/_item_li.html.erb (1.0ms)
+  Rendered items/_item_li.html.erb (0.7ms)
+  Rendered items/_item_li.html.erb (0.8ms)
+  Rendered lists/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/lists/1/items" for ::1 at 2016-08-05 17:48:26 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/JAlrIvWpgFEdcbjr+of/tAB7O2Ak4iBPLjmQ3oGjzSc+EUQa8FsF/N9+iYcgLfhqAeTL/Ut9kpYE2Nk6Fs0WQ==", "item"=>{"description"=>""}, "commit"=>"Create Item", "list_id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (4.9ms)
+  Rendered lists/show.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"items", :id=>nil, :list_id=>"1"} missing required keys: [:id]):
+     5:     <label><%= item.description %></label>
+     6:   </div>
+     7: 
+     8:     <%= form_tag(list_item_path(item.list, item), method: :delete) do %>
+     9:       <button type="submit" class="destroy"></button>
+    10:     <% end %>
+    11: 
+  app/views/items/_item_li.html.erb:8:in `block in _app_views_items__item_li_html_erb___4136634932349346208_70134948301580'
+  app/helpers/items_helper.rb:9:in `block in list_for_item'
+  app/helpers/items_helper.rb:8:in `list_for_item'
+  app/views/items/_item_li.html.erb:1:in `_app_views_items__item_li_html_erb___4136634932349346208_70134948301580'
+  app/views/lists/show.html.erb:18:in `_app_views_lists_show_html_erb__2334010464482538986_70134934509080'
+  app/controllers/items_controller.rb:8:in `create'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (78.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (52.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (120.0ms)
+
+
+Started POST "/lists/1/items" for ::1 at 2016-08-05 17:53:28 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/JAlrIvWpgFEdcbjr+of/tAB7O2Ak4iBPLjmQ3oGjzSc+EUQa8FsF/N9+iYcgLfhqAeTL/Ut9kpYE2Nk6Fs0WQ==", "item"=>{"description"=>""}, "commit"=>"Create Item", "list_id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (28.5ms)
+  Rendered lists/show.html.erb within layouts/application (31.9ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `list_item_pat' for #<#<Class:0x007f93193e24a8>:0x007f9321848120>
+Did you mean?  list_item_path
+               list_items_path
+               list_item_url
+               list_items_url):
+     5:     <label><%= item.description %></label>
+     6:   </div>
+     7: 
+     8:   <%= button_to "x", list_item_pat(item.list, item), method: "delete", class: "destroy" %>
+     9: 
+    10: <% end %>
+  app/views/items/_item_li.html.erb:8:in `block in _app_views_items__item_li_html_erb___4136634932349346208_70134932648480'
+  app/helpers/items_helper.rb:9:in `block in list_for_item'
+  app/helpers/items_helper.rb:8:in `list_for_item'
+  app/views/items/_item_li.html.erb:1:in `_app_views_items__item_li_html_erb___4136634932349346208_70134932648480'
+  app/views/lists/show.html.erb:18:in `_app_views_lists_show_html_erb__2334010464482538986_70134934509080'
+  app/controllers/items_controller.rb:8:in `create'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.0ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (115.8ms)
+
+
+Started POST "/lists/1/items" for ::1 at 2016-08-05 17:53:47 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/JAlrIvWpgFEdcbjr+of/tAB7O2Ak4iBPLjmQ3oGjzSc+EUQa8FsF/N9+iYcgLfhqAeTL/Ut9kpYE2Nk6Fs0WQ==", "item"=>{"description"=>""}, "commit"=>"Create Item", "list_id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (4.7ms)
+  Rendered lists/show.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"items", :id=>nil, :list_id=>"1"} missing required keys: [:id]):
+     5:     <label><%= item.description %></label>
+     6:   </div>
+     7: 
+     8:   <%= button_to "x", list_item_path(item.list, item), method: "delete", class: "destroy" %>
+     9: 
+    10: <% end %>
+  app/views/items/_item_li.html.erb:8:in `block in _app_views_items__item_li_html_erb___4136634932349346208_70134929972420'
+  app/helpers/items_helper.rb:9:in `block in list_for_item'
+  app/helpers/items_helper.rb:8:in `list_for_item'
+  app/views/items/_item_li.html.erb:1:in `_app_views_items__item_li_html_erb___4136634932349346208_70134929972420'
+  app/views/lists/show.html.erb:18:in `_app_views_lists_show_html_erb__2334010464482538986_70134934509080'
+  app/controllers/items_controller.rb:8:in `create'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.7ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (52.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (120.1ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:54:19 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (2.2ms)
+  Rendered items/_item_li.html.erb (1.2ms)
+  Rendered items/_item_li.html.erb (0.6ms)
+  Rendered items/_item_li.html.erb (0.6ms)
+  Rendered lists/show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/lists/1/items/2" for ::1 at 2016-08-05 17:54:43 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XMmzb4Sr7g4y5WOmR337sSY5XXOn38V3sZ3sFEThuZ08odPTZLwkGIXtX2P0F1OuXj8isdJhu7zVNmkz1rwC8A==", "list_id"=>"1", "id"=>"2"}
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 2]]
+  [1m[35m (5.1ms)[0m  commit transaction
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/lists/1
+Completed 302 Found in 9ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:54:43 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (1.6ms)
+  Rendered items/_item_li.html.erb (1.6ms)
+  Rendered items/_item_li.html.erb (1.5ms)
+  Rendered lists/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:55:43 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (2.2ms)
+  Rendered items/_item_li.html.erb (1.4ms)
+  Rendered items/_item_li.html.erb (0.6ms)
+  Rendered lists/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/todomvc-base.self-a66641f41d319c2f2f39ae06e193cc37c366ccc356a61c65c573a7c7452f384e.css?body=1" for ::1 at 2016-08-05 17:55:43 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-05 17:55:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-05 17:55:43 -0400
+
+
+Started GET "/assets/lists.self-22b4b1c3e4098b4dbe9351e0735afd32e59ef7a740de727cdb458bf3b9c9d40c.css?body=1" for ::1 at 2016-08-05 17:55:43 -0400
+
+
+Started GET "/assets/lists.self-9d4b2205ff736a0fd786f2190e96956207bdff8a1be9030fbf6c080af703dc13.js?body=1" for ::1 at 2016-08-05 17:55:43 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-05 17:55:43 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-05 17:55:43 -0400
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-05 17:55:43 -0400
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:56:47 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (2.3ms)
+  Rendered items/_item_li.html.erb (2.0ms)
+  Rendered items/_item_li.html.erb (0.7ms)
+  Rendered lists/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/todomvc-base.self-a66641f41d319c2f2f39ae06e193cc37c366ccc356a61c65c573a7c7452f384e.css?body=1" for ::1 at 2016-08-05 17:56:47 -0400
+
+
+Started GET "/assets/lists.self-22b4b1c3e4098b4dbe9351e0735afd32e59ef7a740de727cdb458bf3b9c9d40c.css?body=1" for ::1 at 2016-08-05 17:56:47 -0400
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-05 17:56:47 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-05 17:56:47 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-05 17:56:47 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-05 17:56:47 -0400
+
+
+Started GET "/assets/lists.self-9d4b2205ff736a0fd786f2190e96956207bdff8a1be9030fbf6c080af703dc13.js?body=1" for ::1 at 2016-08-05 17:56:47 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-05 17:56:47 -0400
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:57:32 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (26.3ms)
+  Rendered lists/show.html.erb within layouts/application (29.9ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `li_for_item' for #<#<Class:0x007f93219b61b0>:0x007f931931b150>
+Did you mean?  list_for_item):
+    1: <%= li_for_item(item) do %>
+    2:   <div class="view">
+    3:     <%= form_for_item_status(item) %>
+    4: 
+  app/views/items/_item_li.html.erb:1:in `_app_views_items__item_li_html_erb___4136634932349346208_70134933441620'
+  app/views/lists/show.html.erb:18:in `_app_views_lists_show_html_erb__2334010464482538986_70134934509080'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (54.1ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (119.4ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:57:59 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (1.8ms)
+  Rendered items/_item_li.html.erb (1.4ms)
+  Rendered items/_item_li.html.erb (0.7ms)
+  Rendered lists/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/todomvc-base.self-a66641f41d319c2f2f39ae06e193cc37c366ccc356a61c65c573a7c7452f384e.css?body=1" for ::1 at 2016-08-05 17:57:59 -0400
+
+
+Started GET "/assets/lists.self-22b4b1c3e4098b4dbe9351e0735afd32e59ef7a740de727cdb458bf3b9c9d40c.css?body=1" for ::1 at 2016-08-05 17:57:59 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-05 17:57:59 -0400
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-05 17:57:59 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-05 17:57:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-05 17:57:59 -0400
+
+
+Started GET "/assets/lists.self-9d4b2205ff736a0fd786f2190e96956207bdff8a1be9030fbf6c080af703dc13.js?body=1" for ::1 at 2016-08-05 17:57:59 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-05 17:57:59 -0400
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:59:16 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (2.1ms)
+  Rendered items/_item_li.html.erb (1.3ms)
+  Rendered items/_item_li.html.erb (0.6ms)
+  Rendered lists/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/todomvc-base.self-a66641f41d319c2f2f39ae06e193cc37c366ccc356a61c65c573a7c7452f384e.css?body=1" for ::1 at 2016-08-05 17:59:16 -0400
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-05 17:59:16 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-05 17:59:16 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-05 17:59:16 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-05 17:59:16 -0400
+
+
+Started GET "/assets/lists.self-22b4b1c3e4098b4dbe9351e0735afd32e59ef7a740de727cdb458bf3b9c9d40c.css?body=1" for ::1 at 2016-08-05 17:59:16 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-05 17:59:16 -0400
+
+
+Started GET "/assets/lists.self-9d4b2205ff736a0fd786f2190e96956207bdff8a1be9030fbf6c080af703dc13.js?body=1" for ::1 at 2016-08-05 17:59:16 -0400
+
+
+Started DELETE "/lists/1/items/6" for ::1 at 2016-08-05 17:59:27 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vYT8lC8n2upKk/qxIDglBMBAZ8AHqI8kYf3Uh/LQfR/d7JwozzAQ/P2bxnSTUo0buEYYAnIW8e8FVlGgYI3Gcg==", "list_id"=>"1", "id"=>"6"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 6]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/lists/1
+Completed 302 Found in 5ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 17:59:27 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (1.0ms)
+  Rendered items/_item_li.html.erb (0.8ms)
+  Rendered lists/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/lists/1/items" for ::1 at 2016-08-05 17:59:30 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dxYes6fKeDZ4/8LE4vOgopf5wAsDFCROCIgjHl7rZawXfn4PR92yIM/3/gFRmQi97/+/yXaqWoVsI6Y5zLbewQ==", "item"=>{"description"=>""}, "commit"=>"Create Item", "list_id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (3.3ms)
+  Rendered lists/show.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"items", :id=>nil, :list_id=>"1"} missing required keys: [:id]):
+     5:     <label><%= item.description %></label>
+     6:   </div>
+     7: 
+     8:     <%= form_tag(list_item_path(item.list, item), method: :delete) do %>
+     9:       <button type="submit" class="destroy"></button>
+    10:     <% end %>
+    11: 
+  app/views/items/_item_li.html.erb:8:in `block in _app_views_items__item_li_html_erb___4136634932349346208_70134946288380'
+  app/helpers/items_helper.rb:9:in `block in list_for_item'
+  app/helpers/items_helper.rb:8:in `list_for_item'
+  app/views/items/_item_li.html.erb:1:in `_app_views_items__item_li_html_erb___4136634932349346208_70134946288380'
+  app/views/lists/show.html.erb:18:in `_app_views_lists_show_html_erb__2334010464482538986_70134934509080'
+  app/controllers/items_controller.rb:8:in `create'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.1ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (81.9ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (56.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (119.3ms)
+
+
+Started POST "/lists/1/items" for ::1 at 2016-08-05 18:04:34 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dxYes6fKeDZ4/8LE4vOgopf5wAsDFCROCIgjHl7rZawXfn4PR92yIM/3/gFRmQi97/+/yXaqWoVsI6Y5zLbewQ==", "item"=>{"description"=>""}, "commit"=>"Create Item", "list_id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (5.2ms)
+  Rendered lists/show.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"items", :id=>nil, :list_id=>"1"} missing required keys: [:id]):
+     5:     <label><%= item.description %></label>
+     6:   </div>
+     7: 
+     8:     <!-- <%= form_tag(list_item_path(item.list, item), method: :delete) do %>
+     9:       <button type="submit" class="destroy"></button>
+    10:     <% end %> -->
+    11: 
+  app/views/items/_item_li.html.erb:8:in `block in _app_views_items__item_li_html_erb___4136634932349346208_70134915331920'
+  app/helpers/items_helper.rb:9:in `block in list_for_item'
+  app/helpers/items_helper.rb:8:in `list_for_item'
+  app/views/items/_item_li.html.erb:1:in `_app_views_items__item_li_html_erb___4136634932349346208_70134915331920'
+  app/views/lists/show.html.erb:18:in `_app_views_lists_show_html_erb__2334010464482538986_70134934509080'
+  app/controllers/items_controller.rb:8:in `create'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.7ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (120.0ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 18:04:39 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (1.0ms)
+  Rendered items/_item_li.html.erb (1.4ms)
+  Rendered lists/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/lists/1/items" for ::1 at 2016-08-05 18:04:43 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8kIELgi1AzEeIUdULUpC7wcGTH4o3+P68nJsszteej6SKmSS6KLJJ6kpe5GeIOrwfwAzvF1hnTGW2emUqQPBUw==", "item"=>{"description"=>""}, "commit"=>"Create Item", "list_id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (4.5ms)
+  Rendered lists/show.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"items", :id=>nil, :list_id=>"1"} missing required keys: [:id]):
+     5:     <label><%= item.description %></label>
+     6:   </div>
+     7: 
+     8:     <!-- <%= form_tag(list_item_path(item.list, item), method: :delete) do %>
+     9:       <button type="submit" class="destroy"></button>
+    10:     <% end %> -->
+    11: 
+  app/views/items/_item_li.html.erb:8:in `block in _app_views_items__item_li_html_erb___4136634932349346208_70134915331920'
+  app/helpers/items_helper.rb:9:in `block in list_for_item'
+  app/helpers/items_helper.rb:8:in `list_for_item'
+  app/views/items/_item_li.html.erb:1:in `_app_views_items__item_li_html_erb___4136634932349346208_70134915331920'
+  app/views/lists/show.html.erb:18:in `_app_views_lists_show_html_erb__2334010464482538986_70134934509080'
+  app/controllers/items_controller.rb:8:in `create'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.8ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (54.0ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (112.2ms)
+
+
+Started POST "/lists/1/items" for ::1 at 2016-08-05 18:04:56 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8kIELgi1AzEeIUdULUpC7wcGTH4o3+P68nJsszteej6SKmSS6KLJJ6kpe5GeIOrwfwAzvF1hnTGW2emUqQPBUw==", "item"=>{"description"=>""}, "commit"=>"Create Item", "list_id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (1.6ms)
+  Rendered items/_item_li.html.erb (0.9ms)
+  Rendered items/_item_li.html.erb (0.5ms)
+  Rendered lists/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 28ms (Views: 24.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/todomvc-base.self-a66641f41d319c2f2f39ae06e193cc37c366ccc356a61c65c573a7c7452f384e.css?body=1" for ::1 at 2016-08-05 18:04:56 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-05 18:04:56 -0400
+
+
+Started GET "/assets/lists.self-22b4b1c3e4098b4dbe9351e0735afd32e59ef7a740de727cdb458bf3b9c9d40c.css?body=1" for ::1 at 2016-08-05 18:04:56 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-05 18:04:56 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-05 18:04:56 -0400
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-05 18:04:56 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-05 18:04:56 -0400
+
+
+Started GET "/assets/lists.self-9d4b2205ff736a0fd786f2190e96956207bdff8a1be9030fbf6c080af703dc13.js?body=1" for ::1 at 2016-08-05 18:04:56 -0400
+
+
+Started POST "/lists/1/items" for ::1 at 2016-08-05 18:05:07 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fngC2WIPvGuqZY87g+PaUMQzP+W10uRdTHgeg1uBtfceEGJlghh2fR1ts/4wiXJPvDVAJ8BsmpYo05ukydwOmg==", "item"=>{"description"=>"Rice"}, "commit"=>"Create Item", "list_id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("description", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "Rice"], ["list_id", 1], ["created_at", "2016-08-05 22:05:07.873070"], ["updated_at", "2016-08-05 22:05:07.873070"]]
+  [1m[35m (5.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/lists/1
+Completed 302 Found in 10ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-08-05 18:05:07 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (1.5ms)
+  Rendered items/_item_li.html.erb (1.2ms)
+  Rendered items/_item_li.html.erb (1.2ms)
+  Rendered lists/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/lists/1/items" for ::1 at 2016-08-05 18:05:10 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2+zA2cwICZ7XK60oDC6MR7AWpQMJUsJIHBqtTaKGXPfB9O/hyfqMMxUknETWhIuZsYlVnmbNcJE2++SpNeiHg==", "item"=>{"description"=>""}, "commit"=>"Create Item", "list_id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (2.2ms)
+  Rendered items/_item_li.html.erb (0.5ms)
+  Rendered items/_item_li.html.erb (0.4ms)
+  Rendered items/_item_li.html.erb (0.4ms)
+  Rendered lists/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/lists/1/items" for ::1 at 2016-08-05 18:05:52 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2+zA2cwICZ7XK60oDC6MR7AWpQMJUsJIHBqtTaKGXPfB9O/hyfqMMxUknETWhIuZsYlVnmbNcJE2++SpNeiHg==", "item"=>{"description"=>""}, "commit"=>"Create Item", "list_id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (5.1ms)
+  Rendered lists/show.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"items", :id=>nil, :list_id=>"1"} missing required keys: [:id]):
+    4:     <%= form_for_item_status(item) %>
+    5:     <label><%= item.description %></label>
+    6: 
+    7:     <%= form_tag(list_item_path(item.list, item), method: :delete) do %>
+    8:       <button type="submit" class="destroy"></button>
+    9:     <% end %>
+   10: 
+  app/views/items/_item_li.html.erb:7:in `block in _app_views_items__item_li_html_erb___4136634932349346208_70134908910480'
+  app/helpers/items_helper.rb:9:in `block in list_for_item'
+  app/helpers/items_helper.rb:8:in `list_for_item'
+  app/views/items/_item_li.html.erb:1:in `_app_views_items__item_li_html_erb___4136634932349346208_70134908910480'
+  app/views/lists/show.html.erb:18:in `_app_views_lists_show_html_erb__2334010464482538986_70134934509080'
+  app/controllers/items_controller.rb:8:in `create'
+
+
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.1ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (52.1ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (112.7ms)
+
+
+Started POST "/lists/1/items" for ::1 at 2016-08-05 18:06:13 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2+zA2cwICZ7XK60oDC6MR7AWpQMJUsJIHBqtTaKGXPfB9O/hyfqMMxUknETWhIuZsYlVnmbNcJE2++SpNeiHg==", "item"=>{"description"=>""}, "commit"=>"Create Item", "list_id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (2.5ms)
+  Rendered items/_item_li.html.erb (0.9ms)
+  Rendered items/_item_li.html.erb (0.5ms)
+  Rendered items/_item_li.html.erb (0.5ms)
+  Rendered lists/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/todomvc-base.self-a66641f41d319c2f2f39ae06e193cc37c366ccc356a61c65c573a7c7452f384e.css?body=1" for ::1 at 2016-08-05 18:06:13 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-05 18:06:13 -0400
+
+
+Started GET "/assets/lists.self-9d4b2205ff736a0fd786f2190e96956207bdff8a1be9030fbf6c080af703dc13.js?body=1" for ::1 at 2016-08-05 18:06:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-05 18:06:13 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-05 18:06:13 -0400
+
+
+Started GET "/assets/lists.self-22b4b1c3e4098b4dbe9351e0735afd32e59ef7a740de727cdb458bf3b9c9d40c.css?body=1" for ::1 at 2016-08-05 18:06:13 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-05 18:06:13 -0400
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-05 18:06:13 -0400
+
+
+Started POST "/lists/1/items" for ::1 at 2016-08-05 18:06:38 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2+zA2cwICZ7XK60oDC6MR7AWpQMJUsJIHBqtTaKGXPfB9O/hyfqMMxUknETWhIuZsYlVnmbNcJE2++SpNeiHg==", "item"=>{"description"=>""}, "commit"=>"Create Item", "list_id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (1.9ms)
+  Rendered items/_item_li.html.erb (0.5ms)
+  Rendered items/_item_li.html.erb (0.4ms)
+  Rendered items/_item_li.html.erb (0.5ms)
+  Rendered lists/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/todomvc-base.self-a66641f41d319c2f2f39ae06e193cc37c366ccc356a61c65c573a7c7452f384e.css?body=1" for ::1 at 2016-08-05 18:06:38 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-05 18:06:38 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-05 18:06:38 -0400
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-05 18:06:38 -0400
+
+
+Started GET "/assets/lists.self-9d4b2205ff736a0fd786f2190e96956207bdff8a1be9030fbf6c080af703dc13.js?body=1" for ::1 at 2016-08-05 18:06:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-05 18:06:38 -0400
+
+
+Started GET "/assets/lists.self-22b4b1c3e4098b4dbe9351e0735afd32e59ef7a740de727cdb458bf3b9c9d40c.css?body=1" for ::1 at 2016-08-05 18:06:38 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-05 18:06:38 -0400
+
+
+Started POST "/lists/1/items" for ::1 at 2016-08-05 18:06:40 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UgoxjNlDZUxQOh5EOTFeBxvAIRQJgcRD4NKyCXEUzF8yYlEwOVSvWucyIoGKW/YYY8Ze1nw/uoiEeTcu40l3Mg==", "item"=>{"description"=>""}, "commit"=>"Create Item", "list_id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered items/_item_li.html.erb (1.3ms)
+  Rendered items/_item_li.html.erb (0.6ms)
+  Rendered items/_item_li.html.erb (0.4ms)
+  Rendered items/_item_li.html.erb (0.4ms)
+  Rendered lists/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 26ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 18:07:05 -0400
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  Rendered lists/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/lists/3" for ::1 at 2016-08-05 18:07:07 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 3]]
+  Rendered items/_item_li.html.erb (3.0ms)
+  Rendered items/_item_li.html.erb (1.8ms)
+  Rendered items/_item_li.html.erb (0.7ms)
+  Rendered items/_item_li.html.erb (0.6ms)
+  Rendered lists/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/lists/3/items/8" for ::1 at 2016-08-05 18:07:11 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+5uibVgEooNq0g9KF+xNHJ/+8/Zl294TpwXpWw9VIROb88LRuBNold3aM4+khuUD5/iMNBBloNjDrmx8nQiafg==", "list_id"=>"3", "id"=>"8"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 8]]
+  [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to http://localhost:3000/lists/3
+Completed 302 Found in 9ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/lists/3" for ::1 at 2016-08-05 18:07:11 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 3]]
+  Rendered items/_item_li.html.erb (3.9ms)
+  Rendered items/_item_li.html.erb (1.7ms)
+  Rendered items/_item_li.html.erb (1.4ms)
+  Rendered lists/show.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/lists/3/items" for ::1 at 2016-08-05 18:07:18 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"syuse6eSuvFNdnIW/N7vgjL2PQYMUAg6cHfsUldAYaHTQ8zHR4Vw5/p+TtNPtEedSvBCxHnudvEU3Gl1xR3azA==", "item"=>{"description"=>"new item"}, "commit"=>"Create Item", "list_id"=>"3"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("description", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "new item"], ["list_id", 3], ["created_at", "2016-08-05 22:07:18.718966"], ["updated_at", "2016-08-05 22:07:18.718966"]]
+  [1m[35m (5.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/lists/3
+Completed 302 Found in 9ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/lists/3" for ::1 at 2016-08-05 18:07:18 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 3]]
+  Rendered items/_item_li.html.erb (2.9ms)
+  Rendered items/_item_li.html.erb (1.5ms)
+  Rendered items/_item_li.html.erb (1.6ms)
+  Rendered items/_item_li.html.erb (1.4ms)
+  Rendered lists/show.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/lists/3/items/13" for ::1 at 2016-08-05 18:07:20 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"plEVkFpGAX9tUAry1cWDc9gbv6yCHZX+PRtmHmu+MNTGOXUsulHLadpYNjdmrytsoB3Abvej6zVZsOM5+eOLuQ==", "list_id"=>"3", "id"=>"13"}
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 13]]
+  [1m[35m (5.1ms)[0m  commit transaction
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to http://localhost:3000/lists/3
+Completed 302 Found in 8ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/lists/3" for ::1 at 2016-08-05 18:07:20 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 3]]
+  Rendered items/_item_li.html.erb (3.0ms)
+  Rendered items/_item_li.html.erb (1.5ms)
+  Rendered items/_item_li.html.erb (1.9ms)
+  Rendered lists/show.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.2ms)
