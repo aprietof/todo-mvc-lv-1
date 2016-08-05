@@ -10,4 +10,10 @@ module ItemsHelper
     end
   end
 
+  def form_for_item_status(item)
+    form_for([item.list, item]) do |f|
+      f.check_box :status, :class => "toggle", :checked => (true if item.complete?)
+    end
+  end
+
 end
