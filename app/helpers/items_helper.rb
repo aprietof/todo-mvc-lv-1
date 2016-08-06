@@ -5,8 +5,10 @@ module ItemsHelper
   end
 
   def list_for_item(item)
-    content_tag_for :li, item, class: li_class_for_item(item) do
-      yield
+    if !item.id.nil?
+      content_tag_for :li, item, class: li_class_for_item(item) do
+        yield
+      end
     end
   end
 

@@ -7872,3 +7872,5 @@ Processing by ListsController#show as HTML
   Rendered items/_item_li.html.erb (0.9ms)
   Rendered lists/show.html.erb within layouts/application (9.6ms)
 Completed 200 OK in 39ms (Views: 25.4ms | ActiveRecord: 1.2ms)
+  [1m[36mItem Load (1.9ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (3.5ms)[0m  [1mSELECT "items".* FROM "items"[0m

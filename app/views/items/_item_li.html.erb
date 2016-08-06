@@ -8,5 +8,6 @@
     <%= form_tag(list_item_path(item.list, item), method: :delete) do %>
       <button type="submit" class="destroy"></button>
     <% end %>
+    <!-- <%= button_to "x", list_item_path(item.list, item), :method => "delete", :class => "destroy" %> -->
 
 <% end %>
